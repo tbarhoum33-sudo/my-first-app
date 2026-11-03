@@ -100,3 +100,41 @@
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de Eventos - Colegio Bolívar</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="actions.js" defer></script>
+</head>
+
+<body>
+  <main class="container">
+    <h1 id="titulo">Contador de Eventos</h1>
+    <p class="subtitle">Colegio Bolívar</p>
+
+    <label for="nuevoTitulo">Cambiar título:</label>
+    <input
+      type="text"
+      id="nuevoTitulo"
+      placeholder="Escribe un nuevo título"
+    >
+
+    <section class="counter">
+      <h2>Eventos registrados</h2>
+      <p id="contador" aria-live="polite">0</p>
+    </section>
+
+    <div class="buttons">
+      <button id="sumar">+ Agregar evento</button>
+      <button id="restar">- Quitar evento</button>
+      <button id="reiniciar">Reiniciar</button>
+    </div>
+  </main>
+</body>
+</html>
+
