@@ -4,210 +4,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contador de Eventos</title>
-
-  <style>
-    body {
-      background: #0b1120;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    h1 {
-      color: #00ffff;
-    }
-
-    #contador {
-      font-size: 70px;
-      margin: 30px;
-      color: #00ff99;
-    }
-
-    button {
-      background: #00ffff;
-      color: #08111f;
-      border: none;
-      padding: 15px 25px;
-      margin: 10px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    button:hover {
-      background: #00ff99;
-      box-shadow: 0 0 15px #00ff99;
-    }
-
-    input {
-      padding: 12px;
-      border-radius: 8px;
-      border: 2px solid #00ffff;
-      background: #172238;
-      color: white;
-      font-size: 16px;
-    }
-  </style>
-</head>
-
-<body>
-
-  <h1 id="titulo">Mi Evento</h1>
-
-  <input
-    type="text"
-    id="nuevoTitulo"
-    placeholder="Escribe el nombre del evento"
-    oninput="cambiarTitulo()"
-  >
-
-  <div id="contador">0</div>
-
-  <button onclick="aumentar()">+1</button>
-  <button onclick="disminuir()">-1</button>
-  <button onclick="reiniciar()">Reiniciar Contador</button>
-
-  <script>
-    let contador = 0;
-
-    function actualizarContador() {
-      document.getElementById("contador").textContent = contador;
-    }
-
-    function aumentar() {
-      contador++;
-      actualizarContador();
-    }
-
-    function disminuir() {
-      contador--;
-      actualizarContador();
-    }
-
-    function reiniciar() {
-      contador = 0;
-      actualizarContador();
-    }
-
-    function cambiarTitulo() {
-      let texto = document.getElementById("nuevoTitulo").value;
-      document.getElementById("titulo").textContent = texto || "Mi Evento";
-    }
-  </script>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contador de Eventos - Colegio Bolívar</title>
-
-  <link rel="stylesheet" href="style.css">
-  <script src="actions.js" defer></script>
-</head>
-
-<body>
-  <main class="container">
-    <h1 id="titulo">Contador de Eventos</h1>
-    <p class="subtitle">Colegio Bolívar</p>
-
-    <label for="nuevoTitulo">Cambiar título:</label>
-    <input
-      type="text"
-      id="nuevoTitulo"
-      placeholder="Escribe un nuevo título"
-    >
-
-    <section class="counter">
-      <h2>Eventos registrados</h2>
-      <p id="contador" aria-live="polite">0</p>
-    </section>
-
-    <div class="buttons">
-      <button id="sumar">+ Agregar evento</button>
-      <button id="restar">- Quitar evento</button>
-      <button id="reiniciar">Reiniciar</button>
-    </div>
-  </main>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Click Counter</title>
+  <title>Click Counter V7</title>
   <link rel="stylesheet" href="style.css">
   <script src="actions.js" defer></script>
 </head>
 <body>
   <main class="container">
     <h1>Click Counter</h1>
-    <p>Selecciona el tiempo y consigue la mayor cantidad de clicks.</p>
+    <p>¡Consigue el mejor puntaje!</p>
 
-    <div class="options">
-      <label for="duration">Duración de la partida</label>
-      <select id="duration">
-        <option value="10">10 segundos</option>
-        <option value="20">20 segundos</option>
-        <option value="30">30 segundos</option>
-      </select>
-    </div>
+    <label for="username">Nombre del jugador</label>
+    <input id="username" type="text"
+      maxlength="30" placeholder="Tu nombre">
 
-    <div class="stats">
-      <div>
-        <span>Tiempo</span>
-        <h2 id="timer">0.000 s</h2>
-      </div>
-      <div>
-        <span>Clicks</span>
-        <h2 id="counter">0</h2>
-      </div>
-    </div>
-
-    <button id="startBtn">Iniciar partida</button>
-    <button id="clickBtn" disabled>¡CLICK!</button>
-    <button id="resetBtn">Reiniciar</button>
-
-    <p id="message" role="status" aria-live="polite"></p>
-  </main>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Click Counter - Leaderboard</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="actions.js" defer></script>
-</head>
-<body>
-  <main class="container">
-    <h1>Click Counter</h1>
-    <p>¡Compite y consigue el mejor puntaje!</p>
-
-    <div class="settings">
-      <label for="username">Nombre del jugador</label>
-      <input type="text" id="username"
-        placeholder="Escribe tu nombre"
-        maxlength="30" autocomplete="nickname">
-
-      <label for="duration">Duración de la partida</label>
-      <select id="duration">
-        <option value="10">10 segundos</option>
-        <option value="20">20 segundos</option>
-        <option value="30">30 segundos</option>
-      </select>
-    </div>
+    <label for="duration">Duración</label>
+    <select id="duration">
+      <option value="10">10 segundos</option>
+      <option value="20">20 segundos</option>
+      <option value="30">30 segundos</option>
+    </select>
 
     <div class="stats">
       <div>
@@ -240,7 +55,7 @@
       <table>
         <thead>
           <tr>
-            <th>Posición</th>
+            <th>#</th>
             <th>Jugador</th>
             <th>Clicks</th>
           </tr>
@@ -251,4 +66,3 @@
   </main>
 </body>
 </html>
-
