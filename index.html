@@ -138,3 +138,46 @@
 </body>
 </html>
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Counter</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="actions.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <h1>Click Counter</h1>
+    <p>Selecciona el tiempo y consigue la mayor cantidad de clicks.</p>
+
+    <div class="options">
+      <label for="duration">Duración de la partida</label>
+      <select id="duration">
+        <option value="10">10 segundos</option>
+        <option value="20">20 segundos</option>
+        <option value="30">30 segundos</option>
+      </select>
+    </div>
+
+    <div class="stats">
+      <div>
+        <span>Tiempo</span>
+        <h2 id="timer">0.000 s</h2>
+      </div>
+      <div>
+        <span>Clicks</span>
+        <h2 id="counter">0</h2>
+      </div>
+    </div>
+
+    <button id="startBtn">Iniciar partida</button>
+    <button id="clickBtn" disabled>¡CLICK!</button>
+    <button id="resetBtn">Reiniciar</button>
+
+    <p id="message" role="status" aria-live="polite"></p>
+  </main>
+</body>
+</html>
+

@@ -106,3 +106,105 @@ button:active {
   transform: scale(0.98);
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #080f24;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 480px;
+  padding: 35px;
+  text-align: center;
+  background: #131e38;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #0006;
+}
+
+h1 {
+  color: #00e5ff;
+  font-size: 36px;
+}
+
+p {
+  color: #cbd5e1;
+}
+
+.options {
+  margin: 25px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+select {
+  padding: 12px;
+  width: 100%;
+  background: #253452;
+  color: white;
+  border: 1px solid #00e5ff;
+  border-radius: 8px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 25px 0;
+}
+
+.stats h2 {
+  color: #00e5ff;
+  font-size: 30px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  margin: 7px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #00e5ff;
+  color: #081225;
+}
+
+button:hover:not(:disabled) {
+  background: #00bcd4;
+}
+
+#clickBtn {
+  background: #7c3aed;
+  color: white;
+  font-size: 26px;
+  padding: 30px;
+}
+
+#clickBtn:hover:not(:disabled) {
+  background: #6d28d9;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+#message {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #22c55e;
+}
+
